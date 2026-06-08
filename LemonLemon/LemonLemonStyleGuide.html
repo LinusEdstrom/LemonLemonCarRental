@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LemonLemon StyleGuide</title>
+  
+  <link rel="icon" type="image/jpg" href="pics/LemonLemon.jpg">
+  <link rel="stylesheet" href="LemonLemon.css">
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="ll-layout">
+  
+    <div class="ll-loader" style="display:none;"></div>
+
+   <header class="ll-header">
+    <button class="ll-nav-toggle">☰</button>
+
+    <div class="ll-header-inner">
+    <h1 class="ll-h1">Styleguide</h1>
+    <p class="ll-body">LemonLemon design system & componentslibrary</p>
+    </div>
+  </header>
+ 
+ <nav class="ll-nav">
+  <div class="ll-nav-inner">
+
+    <a class="ll-brand nav-link" data-page="home" href="#home">
+      <img src="pics/LemonLemonLogo.jpg" alt="LemonLemon logo" height="100" class="ll-brand-logo">
+      <h3 class="ll-h3">LemonLemon – StyleGuide</h3>
+    </a>
+
+    <ul class="ll-body">
+
+      <li class="nav-item">
+        <a class="nav-link" data-page="home" href="#home">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-page="typography" href="#typography">Typography</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-page="colors" href="#colors">Colors</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-page="buttons" href="#buttons">Buttons</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-page="tables" href="#tables">Tables</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-page="messages" href="#messages">Messages</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-page="panels" href="#panels">Panels</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-page="forms" href="#forms">Forms</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-page="navigation" href="#navigation">Navigation</a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>
+
+
+<main id="content" class="ll-main">
+</main>
+
+  <!--Home-->
+<script type="text/template" id="home">
+  <section class="home-section">
+    <div class="ll-panel ll-body"><h4 class=ll-h4>Welcome Traveler</h4>
+    <hr>
+    Hi, and welcome to the LemonLemon styleguide!<br>
+    We are the spa & relax subdivision of the Wigell group.<br>
+    To the left here you see the navigation menu for this styleguide,<br>
+    where you can see examples of our style and copy code examples for simple usage.<br>
+    <hr>
+    But first make sure to copy/paste the icon, css:s and javaScript down below<br>
+    for proper usage of our ll-design(LemonLemon design).
+    <hr>
+    <div class="ll-panel--positive ll-body">
+      
+    To use the design, you need to place these three links inside the head of your HTML.<br>
+They include the LemonLemon icon, the main CSS file, and the CSS file for smaller screens<br>  
+    <button class="copy-btn" data-target="#headLinks">Copy</button>
+    <hr>
+  <pre id="headLinks"><code>&lt;link rel="icon" type="image/jpg" href="pics/LemonLemon.jpg"&gt;
+  &lt;link rel="stylesheet" href="LemonLemon.css"&gt;
+  &lt;link rel="stylesheet" href="LemonLemonMedia.css"&gt;
+  </code></pre>
+  </div>
+  <div class="ll-panel--positive ll-body">
+  To enable the functionality, include this JavaScript link at the end of your HTML body.<br>
+    <button class="copy-btn" data-target="#javaScript">Copy</button>
+    <hr>
+    <pre id="javaScript"><code>&lt;script src="LemonLemon.js"&gt;&lt;/script&gt;
+</code></pre>
+
+
+      <div>
+  </section>
+</script>
+
+<!--Navigation-->
+
+<!--Navigation-->
+
+<script type="text/template" id="navigation">
+<section class="nav-section">
+<div class="ll-panel ll-body">
+  <h3 class="ll-h3">Navigation</h3>
+
+  <!-- VISUAL NAVIGATION PREVIEW -->
+  <nav class="ll-nav">
+  <div class="ll-nav-inner">
+
+    <a class="ll-brand nav-link" data-page="home" href="#home">
+      <img src="pics/LemonLemonLogo.jpg" alt="LemonLemon logo" height="100" class="ll-brand-logo">
+      <h3 class="ll-h3">LemonLemon - StyleGuide</h3>
+    </a>
+
+    <ul class="ll-body">
+
+      <li class="nav-item"><a class="nav-link" data-page="home" href="#home">Home</a></li>
+      <li class="nav-item"><a class="nav-link" data-page="typography" href="#typography">Typography</a></li>
+      <li class="nav-item"><a class="nav-link" data-page="colors" href="#colors">Colors</a></li>
+      <li class="nav-item"><a class="nav-link" data-page="buttons" href="#buttons">Buttons</a></li>
+      <li class="nav-item"><a class="nav-link" data-page="tables" href="#tables">Tables</a></li>
+      <li class="nav-item"><a class="nav-link" data-page="messages" href="#messages">Messages</a></li>
+      <li class="nav-item"><a class="nav-link" data-page="panels" href="#panels">Panels</a></li>
+      <li class="nav-item"><a class="nav-link" data-page="forms" href="#forms">Forms</a></li>
+      <li class="nav-item"><a class="nav-link" data-page="navigation" href="#navigation">Navigation</a></li>
+
+    </ul>
+
+  </div>
+</nav>
+
+</div>
+</section>
+
+
+<!-- COPY BUTTON -->
+<button class="copy-btn" data-target="#navigationCode">Copy</button>
+
+  <!-- COPY BUTTON -->
+  <button class="copy-btn" data-target="#navigationCode">Copy</button>
+
+   <!-- CODE SNIPPET -->
+  
+
+    <div class="ll-panel ll-body">
+    <p>
+  Each section in the LemonLemon StyleGuide is loaded dynamically using 
+  <code>&lt;script type="text/template" id="..."&gt;</code>.<br> 
+  The <strong>id</strong> must match the navigation link. 
+  For example, the “Buttons” section uses:
+</p>
+  <pre><code>&lt;script type="text/template" id="buttons"&gt;
+  
+  </pre>
+</code> 
+     
+     All scripts for navigation follow this:
+        <ul>
+          <li>First: script type="text/template" id="xxx"(as shown above)</li>
+           <li> Second: section class ="xxx-section"</li>
+          <li>Third: Usually a "div" class with a wrapping panel.</li>
+          for example: ll-panel ll-body (standard panel and body text).
+          So together with the script text/template it looks like:
+          <pre><code id="navScriptStructure">&lt;script type="text/template" id="..."&gt;</code>.<br>
+          &lt;section class="...-section"&gt;
+          &lt;div class="ll-panel ll-body"&gt;
+          </code></pre>
+           <button class="copy-btn" data-target="#navScriptStructure">Copy</button>
+
+          <li>  In this div u write your code for this section.</li>
+        </ul>
+
+        <script type="text/template" id="buttons">
+        <section class="ll-section">
+        <div class="ll-panel ll-body">
+        <h3 class="ll-h3">Buttons</h3>
+  
+</div>
+</div>
+</section>
+</script>
+
+<!--Typography-->
+<script type="text/template" id="typography">
+
+<section class="ll-section">
+  <div class="ll-panel ll-body">
+    <h3 class="ll-h3">Typography</h3>
+
+    <!-- H1 -->
+    <div class="ll-row">
+      <div class="ll-col-info">
+        <h1 id="typo-h1" class="ll-h1">H1 heading</h1>
+      </div>
+      <div class="ll-col-copy">
+        <button class="copy-btn" data-target="#typo-h1">Copy</button>
+
+        <pre><code>&lt;h1 class="ll-h1"&gt;H1 heading&lt;/h1&gt;</code></pre>
+      </div>
+    </div>
+
+    <!-- H2 -->
+    <div class="ll-row">
+      <div class="ll-col-info">
+        <h2 id="typo-h2" class="ll-h2">H2 heading</h2>
+      </div>
+      <div class="ll-col-copy">
+        <button class="copy-btn" data-target="#typo-h2">Copy</button>
+
+        <pre><code>&lt;h2 class="ll-h2"&gt;H2 heading&lt;/h2&gt;</code></pre>
+      </div>
+    </div>
+
+    <!-- H3 -->
+    <div class="ll-row">
+      <div class="ll-col-info">
+        <h3 id="typo-h3" class="ll-h3">This is an H3 heading</h3>
+      </div>
+      <div class="ll-col-copy">
+        <button class="copy-btn" data-target="#typo-h3">Copy</button>
+
+        <pre><code>&lt;h3 class="ll-h3"&gt;This is an H3 heading&lt;/h3&gt;</code></pre>
+      </div>
+    </div>
+
+    <!-- H4 -->
+    <div class="ll-row">
+      <div class="ll-col-info">
+        <h4 id="typo-h4" class="ll-h4">This is an H4 heading</h4>
+      </div>
+      <div class="ll-col-copy">
+        <button class="copy-btn" data-target="#typo-h4">Copy</button>
+
+        <pre><code>&lt;h4 class="ll-h4"&gt;This is an H4 heading&lt;/h4&gt;</code></pre>
+      </div>
+    </div>
+
+    <!-- Body text -->
+    <div class="ll-row">
+      <div class="ll-col-info">
+        <p id="typo-body" class="ll-body">This is body text. Good for LemonLemon.</p>
+      </div>
+      <div class="ll-col-copy">
+        <button class="copy-btn" data-target="#typo-body">Copy</button>
+
+        <pre><code>&lt;p class="ll-body"&gt;This is body text. Good for LemonLemon.&lt;/p&gt;</code></pre>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</script>
+
+<!-- Colors -->
+<script type="text/template" id="colors">
+
+<section class="ll-section">
+  <div class="ll-panel ll-body">
+    <h3 class="ll-h3">Colors</h3>
+
+    <!-- Primary -->
+    <div class="ll-panel ll-body">
+      <p class="ll-h4">Primary</p>
+      <div class="ll-row">
+        <div class="ll-color-box" style="background:#E4E70E;"></div>
+        <div class="ll-col-copy">
+        <button class="copy-btn" data-color="#E4E70E">Copy</button>
+       <pre><code>#E4E70E</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Secondary -->
+    <div class="ll-panel ll-body">
+      <p class="ll-h4">Secondary</p>
+      <div class="ll-row">
+        <div class="ll-color-box" style="background:#FFF8CC;"></div>
+        <div class="ll-col-copy">
+        <button class="copy-btn" data-color="#FFF8CC">Copy</button>
+       <pre><code>#FFF8CC</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third -->
+    <div class="ll-panel ll-body">
+      <p class="ll-h4">Third</p>
+      <div class="ll-row">
+        <div class="ll-color-box" style="background:#FFFDF2;"></div>
+        <div class="ll-col-copy">
+          <button class="copy-btn" data-color="#FFFDF2">Copy</button>
+          <pre><code>#FFFDF2</code></pre>
+      </div>
+      </div>
+    </div>
+
+    <!-- Function -->
+    <div class="ll-panel ll-body">
+      <p class="ll-h4">Function</p>
+      <div class="ll-row">
+        <div class="ll-color-box" style="background:#808080;"></div>
+        <div class="ll-col-copy">
+        <button class="copy-btn" data-color="#808080">Copy</button>
+          <pre><code>#808080</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Positive -->
+    <div class="ll-panel ll-body">
+      <p class="ll-h4">Positive</p>
+      <div class="ll-row">
+        <div class="ll-color-box" style="background:#32CD32;"></div>
+        <div class="ll-col-copy">
+          <button class="copy-btn" data-color="#32CD32">Copy</button>
+    <pre><code>#32CD32</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <!-- Negative -->
+    <div class="ll-panel ll-body">
+      <p class="ll-h4">Negative</p>
+      <div class="ll-row">
+        <div class="ll-color-box" style="background:#FF6B6B;"></div>
+        <div class="ll-col-copy">
+       <button class="copy-btn" data-color="#FF6B6B">Copy</button>
+        <pre><code>#FF6B6B</code></pre>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</script>
+
+
+<!--Buttons-->
+<script type="text/template" id="buttons">
+
+<section class="ll-section">
+  <div class="ll-panel ll-body">
+    <h3 class="ll-h3">Buttons</h3>
+
+    <!-- Standard Button -->
+    <div class="ll-row">
+      <div class="ll-col-info">
+        <p>Det här är standard-knappen</p>
+      </div>
+      <div class="ll-col-button">
+        <button id="btn-standard" class="ll-btn btn-standard">Standard</button>
+      </div>
+      <div class="ll-col-copy">
+        <button class="copy-btn" data-target="#btn-standard">Copy</button>
+
+        <pre><code>&lt;button class="ll-btn btn-standard"&gt;Standard&lt;/button&gt;</code></pre>
+      </div>
+    </div>
+
+    <!-- Function Button -->
+    <div class="ll-row">
+      <div class="ll-col-info">
+        <p>Det här är knappen för funktioner</p>
+      </div>
+      <div class="ll-col-button">
+        <button id="btn-function" class="ll-btn btn-function">Function</button>
+      </div>
+      <div class="ll-col-copy">
+        <button class="copy-btn" data-target="#btn-function">Copy</button>
+
+        <pre><code>&lt;button class="ll-btn btn-function"&gt;Function&lt;/button&gt;</code></pre>
+      </div>
+    </div>
+
+    <!-- Positive Button -->
+    <div class="ll-row">
+      <div class="ll-col-info">
+        <p>Det här är knappen för någonting positivt</p>
+      </div>
+      <div class="ll-col-button">
+        <button id="btn-positive" class="ll-btn btn-positive">Positive</button>
+      </div>
+      <div class="ll-col-copy">
+        <button class="copy-btn" data-target="#btn-positive">Copy</button>
+
+        <pre><code>&lt;button class="ll-btn btn-positive"&gt;Positive&lt;/button&gt;</code></pre>
+      </div>
+    </div>
+
+    <!-- Negative Button -->
+    <div class="ll-row">
+      <div class="ll-col-info">
+        <p>Det här är knappen för någonting negativt</p>
+      </div>
+      <div class="ll-col-button">
+        <button id="btn-negative" class="ll-btn btn-negative">Negative</button>
+      </div>
+      <div class="ll-col-copy">
+        <button class="copy-btn" data-target="#btn-negative">Copy</button>
+
+        <pre><code>&lt;button class="ll-btn btn-negative"&gt;Negative&lt;/button&gt;</code></pre>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</script>
+
+
+<!--Tables-->
+<script type="text/template" id="tables">
+
+<section class="ll-section">
+  <div class="ll-panel ll-body">
+    <h3 class="ll-h3">Tables</h3>
+
+    <!-- Few Columns Table -->
+    <div class="ll-panel ll-body">
+      <p class="ll-h4">Few Columns Table</p>
+
+      <table id="table-few" class="table-few">
+
+  <tr data-header="Namn | Status | Datum">
+    <td data-label="Namn">Anna</td>
+    <td data-label="Status">Aktiv</td>
+    <td data-label="Datum">2026-05-02</td>
+  </tr>
+
+  <tr data-header="Namn | Status | Datum">
+    <td data-label="Namn">Johan</td>
+    <td data-label="Status">Inaktiv</td>
+    <td data-label="Datum">2026-04-28</td>
+  </tr>
+
+</table>
+
+      
+      <button class="copy-btn" data-target="#table-few">Copy</button>
+
+<pre><code id="tableFewCode">
+&lt;table id="table-few" class="table-few"&gt;
+
+    &lt;tr data-header="Namn | Status | Datum"&gt;
+      &lt;td data-label="Namn"&gt;Anna&lt;/td&gt;
+      &lt;td data-label="Status"&gt;Aktiv&lt;/td&gt;
+      &lt;td data-label="Datum"&gt;2026-05-02&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr data-header="Namn | Status | Datum"&gt;
+      &lt;td data-label="Namn"&gt;Johan&lt;/td&gt;
+      &lt;td data-label="Status"&gt;Inaktiv&lt;/td&gt;
+      &lt;td data-label="Datum"&gt;2026-04-28&lt;/td&gt;
+    &lt;/tr&gt;
+
+&lt;/table&gt;
+</code></pre>
+
+    </div>
+
+    <!-- Many Columns Table -->
+    <div class="ll-panel ll-body">
+      <p class="ll-h4">Many Columns Table</p>
+
+      <table id="table-many" class="table-many">
+
+    <tr data-header="ID | Namn | Typ | Skapad | Ändrad | Status | Ägare">
+      <td data-label="ID">1023</td>
+      <td data-label="Namn">Projekt A</td>
+      <td data-label="Typ">utvecklare</td>
+      <td data-label="Skapad">2026-01-12</td>
+      <td data-label="Ändrad">2026-04-20</td>
+      <td data-label="Status">Aktiv</td>
+      <td data-label="Ägare">Linus</td>
+    </tr>
+
+    <tr data-header="ID | Namn | Typ | Skapad | Ändrad | Status | Ägare">
+      <td data-label="ID">1024</td>
+      <td data-label="Namn">Projekt B</td>
+      <td data-label="Typ">Ingenjör</td>
+      <td data-label="Skapad">2026-03-09</td>
+      <td data-label="Ändrad">2026-04-22</td>
+      <td data-label="Status">Aktiv</td>
+      <td data-label="Ägare">Tomas</td>
+    </tr>
+
+    <tr data-header="ID | Namn | Typ | Skapad | Ändrad | Status | Ägare">
+      <td data-label="ID">1025</td>
+      <td data-label="Namn">Projekt C</td>
+      <td data-label="Typ">Inspektör</td>
+      <td data-label="Skapad">2026-04-05</td>
+      <td data-label="Ändrad">2026-04-07</td>
+      <td data-label="Status">Inaktiv</td>
+      <td data-label="Ägare">Mollgan</td>
+    </tr>
+
+</table>
+
+      <button class="copy-btn" data-target="#table-many">Copy</button>
+    
+      <pre><code id="tableManyCode">
+&lt;table id="table-many" class="table-many"&gt;
+
+    &lt;tr data-header="ID | Namn | Typ | Skapad | Ändrad | Status | Ägare"&gt;
+      &lt;td data-label="ID"&gt;1023&lt;/td&gt;
+      &lt;td data-label="Namn"&gt;Projekt A&lt;/td&gt;
+      &lt;td data-label="Typ"&gt;utvecklare&lt;/td&gt;
+      &lt;td data-label="Skapad"&gt;2026-01-12&lt;/td&gt;
+      &lt;td data-label="Ändrad"&gt;2026-04-20&lt;/td&gt;
+      &lt;td data-label="Status"&gt;Aktiv&lt;/td&gt;
+      &lt;td data-label="Ägare"&gt;Linus&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr data-header="ID | Namn | Typ | Skapad | Ändrad | Status | Ägare"&gt;
+      &lt;td data-label="ID"&gt;1024&lt;/td&gt;
+      &lt;td data-label="Namn"&gt;Projekt B&lt;/td&gt;
+      &lt;td data-label="Typ"&gt;Ingenjör&lt;/td&gt;
+      &lt;td data-label="Skapad"&gt;2026-03-09&lt;/td&gt;
+      &lt;td data-label="Ändrad"&gt;2026-04-22&lt;/td&gt;
+      &lt;td data-label="Status"&gt;Aktiv&lt;/td&gt;
+      &lt;td data-label="Ägare"&gt;Tomas&lt;/td&gt;
+    &lt;/tr&gt;
+
+    &lt;tr data-header="ID | Namn | Typ | Skapad | Ändrad | Status | Ägare"&gt;
+      &lt;td data-label="ID"&gt;1025&lt;/td&gt;
+      &lt;td data-label="Namn"&gt;Projekt C&lt;/td&gt;
+      &lt;td data-label="Typ"&gt;Inspektör&lt;/td&gt;
+      &lt;td data-label="Skapad"&gt;2026-04-05&lt;/td&gt;
+      &lt;td data-label="Ändrad"&gt;2026-04-07&lt;/td&gt;
+      &lt;td data-label="Status"&gt;Inaktiv&lt;/td&gt;
+      &lt;td data-label="Ägare"&gt;Mollgan&lt;/td&gt;
+    &lt;/tr&gt;
+
+&lt;/table&gt;
+</code></pre>
+  
+    </div>
+
+  </div>
+</section>
+</script>
+
+
+ <!-- Panel -->
+
+  <script type="text/template" id="panels">
+<section class="ll-section">
+
+<div class="ll-panel ll-body">
+  <h3 class="ll-h3">Paneler</h3>
+
+  <!-- Standard panel -->
+  <div class="ll-panel ll-body">
+    <button class="copy-btn" data-code="standard-panel">Copy</button>
+
+    <h4 class="ll-h4">Standard panel</h4>
+    <p>Det här är standardpanelen för vanlig information.</p>
+
+    <pre><code>&lt;div class="ll-panel"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+  </div>
+
+  <!-- Positiv panel -->
+  <div class="ll-panel--positive ll-body">
+    <button class="copy-btn" data-code="positive-panel">Copy</button>
+
+    <h4 class="ll-h4">Positiv panel</h4>
+    <p>Den här panelen används för positiv information.</p>
+
+    <pre><code>&lt;div class="ll-panel--positive"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+  </div>
+
+  <!-- Negativ panel -->
+  <div class="ll-panel--negative ll-body">
+    <button class="copy-btn" data-code="negative-panel">Copy</button>
+
+    <h4 class="ll-h4">Negativ panel</h4>
+    <p>Den här panelen används för negativ information.</p>
+
+    <pre><code>&lt;div class="ll-panel--negative"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
+</section>
+</script>
+
+  <!--Messages-->
+  <script type="text/template" id="messages">
+<section class="ll-section">
+
+<div class="ll-panel ll-body">
+  <h3 class="ll-h3">Popups</h3>
+
+  <!-- Success Popup  -->
+  <div class="ll-popup ll-popup--success">
+    <span class="ll-popup-close">&times;</span>
+    <h4 class="ll-h4">Saved successfully</h4>
+    <p>Your changes have been saved.</p>
+  </div>
+
+  <button class="copy-btn" data-target="#success-popup-snippet">Copy</button>
+  <pre id="success-popup-snippet"><code>&lt;div class="ll-popup ll-popup--success"&gt;
+  &lt;span class="ll-popup-close"&gt;&amp;times;&lt;/span&gt;
+  &lt;h4 class="ll-h4"&gt;Saved successfully&lt;/h4&gt;
+  &lt;p&gt;Your changes have been saved.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+  <!-- Error Popup  -->
+  <div class="ll-popup ll-popup--error">
+    <span class="ll-popup-close">&times;</span>
+    <h4 class="ll-h4">Something went wrong</h4>
+    <p>We could not save your changes.</p>
+  </div>
+
+  <button class="copy-btn" data-target="#error-popup-snippet">Copy</button>
+  <pre id="error-popup-snippet"><code>&lt;div class="ll-popup ll-popup--error"&gt;
+  &lt;span class="ll-popup-close"&gt;&amp;times;&lt;/span&gt;
+  &lt;h4 class="ll-h4"&gt;Something went wrong&lt;/h4&gt;
+  &lt;p&gt;We could not save your changes.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+</section>
+</script>
+
+<!--Formulär--> 
+
+  <script type="text/template" id="forms">
+<section class="ll-section">
+
+<div class="ll-membership-wrapper">
+
+  <form class="ll-membership-form" id="membershipForm">
+
+    <img src="pics/LemonLemonLogo.jpg" alt="LemonLemon Logo" class="ll-membership-logo">
+
+
+    <h3 class="ll-h3" style="text-align:center;">LemonLemon Membership</h3>
+
+    <input type="text" class="ll-input" id="firstname" placeholder="First name">
+    <input type="text" class="ll-input" id="lastname" placeholder="Last name">
+    <input type="email" class="ll-input" id="email" placeholder="Email">
+    <input type="tel" class="ll-input" id="phone" placeholder="Phone number">
+    <input type="date" class="ll-input" id="dob" placeholder="Date of birth">
+
+    <button type="submit" class="ll-submit-btn">Become a Member</button>
+
+    <!-- Success Popup -->
+    <div id="successPopup" class="ll-popup ll-popup--success" style="display:none;">
+      <span class="ll-popup-close" onclick="this.parentElement.style.display='none'">&times;</span>
+      <h4 class="ll-h4">Saved successfully</h4>
+      <p>Your membership has been registered.</p>
+    </div>
+
+    <!-- Error Popup -->
+    <div id="errorPopup" class="ll-popup ll-popup--error" style="display:none;">
+      <span class="ll-popup-close" onclick="this.parentElement.style.display='none'">&times;</span>
+      <h4 class="ll-h4">Something went wrong</h4>
+      <p>Please fill in all fields correctly.</p>
+    </div>
+
+  </form>
+    <button class="copy-btn" data-target="#membershipFormCode">Copy</button>
+
+<pre id="membershipFormCode"><code>&lt;form class="ll-membership-form"&gt;
+  &lt;img src="pics/LemonLemonLogo.png" class="ll-membership-logo"&gt;
+  &lt;input type="text" class="ll-input" placeholder="First name"&gt;
+  &lt;input type="text" class="ll-input" placeholder="Last name"&gt;
+  &lt;input type="email" class="ll-input" placeholder="Email"&gt;
+  &lt;input type="tel" class="ll-input" placeholder="Phone number"&gt;
+  &lt;input type="date" class="ll-input"&gt;
+  &lt;button type="submit" class="ll-submit-btn"&gt;Become a Member&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+
+
+</div>
+</section>
+</script>
+
+<footer class="ll-footer">
+    <div class="ll-footer-ad">
+    <img src="https://via.placeholder.com/300x600/ffcc00/000?text=ANNONS+300x600" alt="Annons">
+    <p>Superdeal! 50% rabatt på allt idag.</p>
+</div>
+
+
+    <div class="ll-footer-content">
+        <p>© 2026 LemonLemon. All rights reserved.</p>
+    </div>
+</footer>
+
+
+<script src="LemonLemon.js"></script>
+</body>
+</html>

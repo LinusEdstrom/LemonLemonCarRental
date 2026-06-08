@@ -1,0 +1,1359 @@
+/* =========================================
+   ROOT — MOBILE FIRST
+   (sidebar = 0 på mobil)
+========================================= */
+:root {
+  --sidebar-width: 0px;      
+  --header-height: 120px;
+  --footer-height: 120px
+}
+
+/* =========================================
+   HEADER
+========================================= */
+.ll-header {
+
+  
+  padding-left: var(--sidebar-width);
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  height: var(--header-height);
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  z-index: 9;
+}
+
+.ll-header-inner {
+  text-align: center;
+  width: 100%;
+}
+/* Anpassa nav-brand när den ligger i headern */
+.ll-header .ll-brand {
+  flex-direction: row;     
+  gap: 0.5rem;
+  margin: 0;
+}
+
+/* Gör loggan normalstor i headern */
+.ll-header .ll-brand-logo {
+  height: 200px;   
+  width: auto;
+  margin: 0;
+}
+.ll-brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem auto;
+}
+@media (max-width: 600px) {
+  .ll-header {
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  .ll-header .ll-brand-logo {
+    height: 80px;
+  }
+}
+
+/* =========================================
+   NAVIGATION — MOBILE FIRST
+========================================= */
+.ll-nav {
+  display: none;               
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 85%;              
+  max-width: 300px;       
+  height: 100vh;
+   
+
+  background: rgba(228, 231, 14);
+  padding: 1.5rem;
+  box-sizing: border-box;      
+
+  flex-direction: column;
+  align-items: flex-start;
+
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.ll-nav.open {
+  display: flex;
+}
+
+.ll-nav-toggle {
+  display: block;              
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+}
+
+/* Nav content */
+.ll-brand {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  text-decoration: none;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.ll-brand-logo {
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.ll-nav-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nav-item {
+  width: 100%;
+  border-radius: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.nav-item a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.nav-item a::after {
+  content: "›";
+  font-size: 1.5rem;
+  opacity: 0.5;
+  transition: transform 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: #beb7c0;
+}
+
+.ll-nav ul {
+  list-style: none;
+  padding: 1;
+  margin: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.ll-nav a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* =========================================
+   MAIN — MOBILE FIRST
+========================================= */
+.ll-main {
+  background-color: #F8FFE5;
+
+  margin-top: var(--header-height);
+  margin-left: var(--sidebar-width);
+  padding-bottom: calc(var(--footer-height) + 2rem);
+
+  
+  overflow: auto;                         
+  box-sizing: border-box;
+                               
+}
+
+/*=====================================
+  FOOTER - MOBILE FIRST
+  ===================================*/
+.ll-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    height: 150px;       
+    max-height: 150px;  
+    overflow: hidden;   
+
+    background: #FFF8CC;
+    border-top: 1px solid #ddd;
+
+    padding: 0;          
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch; 
+    flex-wrap: nowrap;
+
+    z-index: 20;
+}
+
+.footer-box {
+    flex: 1;
+    height: 100%;         
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-ad {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;     
+    display: block;
+}
+
+
+
+
+/* MOBILFIX – bryt rad + krymp bilder */
+@media (max-width: 600px) {
+  .ll-footer {  
+    padding: 0.5rem;
+  }
+
+ @media (max-width: 600px) {
+  .footer-ad {
+    max-height: 70%;
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1099px) {
+  .footer-ad {
+    max-height: 80%;
+    max-width: 80%;
+  }
+}
+}
+/* TABLET – lite större, men fortfarande säkert */
+@media (min-width: 600px) and (max-width: 1099px) {
+  .footer-ad {
+    height: 80%;
+  }
+}
+
+
+
+/* =========================================
+   GRID / ROWS
+========================================= */
+.ll-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+  gap: 1rem;
+}
+
+.ll-col-copy {
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  position: relative;
+  margin: 0.5rem;
+}
+
+.ll-col-info,
+.ll-col-button,
+.ll-col-copy {
+  width: 100%;
+}
+/* =========================================
+   Copy container and button
+========================================= */
+
+/* Copy block container */
+.ll-col-copy {
+  background: #f5f5f5;          
+  border: 1px solid #aaa;       
+  padding: 1rem;                
+  border-radius: 0.5rem;        
+  position: relative;
+}
+
+/* Copy button */
+.copy-btn {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  background: #ddd;
+  border: 1px solid #aaa;
+  cursor: pointer;
+  z-index: 10;
+}
+.copy-btn:hover {
+    background-color: #855b96;
+}
+
+/* Code blocks */
+pre {
+  background: #eee;            
+  padding: 1rem;                
+  border-radius: 0.5rem;        
+  overflow-x: auto;
+}
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+.ll-h1,
+.ll-h2,
+.ll-h3,
+.ll-h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: -0.02rem;
+}
+
+.ll-h1 { font-size: 3rem; font-weight: 700; line-height: 1.2; }
+.ll-h2 { font-size: 2.25rem; font-weight: 700; line-height: 1.25; }
+.ll-h3 { font-size: 1.75rem; font-weight: 600; line-height: 1.3; }
+.ll-h4 { font-size: 1.25rem; font-weight: 600; line-height: 1.35; }
+
+
+.ll-body {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* =========================================
+   COLOR BOX
+========================================= */
+.ll-color-box {
+  width: 6rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 0.75rem;
+  border: 0.125rem solid black;
+}
+/* =========================================
+   BUTTONS
+========================================= */
+.ll-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 3.25rem;
+  padding: 0 1rem;
+  font-size: 0.875rem;
+  line-height: 1.3;
+
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  background-color: rgba(228, 231, 14);
+  color: black;
+  opacity: 0.8;
+  font-weight: 600;
+}
+.ll-btn:hover {
+  background-color: #855b96;
+}
+
+.ll-btn:active {
+  transform: scale(0.97);
+}
+.btn-function { background-color: grey; }
+.btn-positive { background-color: limegreen; }
+.btn-negative { background-color: #FF6B6B; }
+
+/* ===========================
+TABLES ZEBRA STYLE 
+============================== */
+
+.table-few,
+.table-many {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-few th,
+.table-few td,
+.table-many th,
+.table-many td {
+  font-size: 0.95rem;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+.table-many th,
+.table-many td {
+  font-size: 0.85rem;
+  padding: 0.55rem 0.75rem;
+}
+/* =========================================
+   VERTIKAL LAYOUT FÖR ALLA TABELLER
+========================================= */
+
+.table-few thead th,
+.table-many thead th {
+background-color: #E4E70E;
+font-weight: 600;
+}
+/* Vertikal header */
+.table-few thead th,
+.table-many thead th {
+  writing-mode: vertical-rl;
+  transform: rotate(270deg);
+  padding: 10px 5px;
+  white-space: nowrap;
+  text-align: left;
+}
+
+/* zebra pattern */
+.table-few tbody tr:nth-child(odd) td:nth-child(odd),
+.table-few tbody tr:nth-child(even) td:nth-child(even),
+.table-many tbody tr:nth-child(odd) td:nth-child(odd),
+.table-many tbody tr:nth-child(even) td:nth-child(even) {
+  background-color: #fff8cc;
+}
+
+.table-few tbody tr:nth-child(odd) td:nth-child(even),
+.table-few tbody tr:nth-child(even) td:nth-child(odd),
+.table-many tbody tr:nth-child(odd) td:nth-child(even),
+.table-many tbody tr:nth-child(even) td:nth-child(odd) {
+  background-color: #fffdf2;
+}
+/*========================================
+    CARDS FÖR USERS CARS OCH BOOKINGS
+========================================*/
+
+.ll-card {
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+   max-width: 700px;   /* eller 500px om du vill ha ännu tajtare */
+  margin: 0 auto;
+}
+
+.ll-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.8);
+}
+
+.ll-card:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.ll-card-header {
+  margin: 0.5rem 0.5rem;
+  padding: 0.5rem;
+  font-weight: 600;
+}
+
+.ll-card-row:nth-child(odd) {
+  background-color: #fff8cc;
+}
+
+.ll-card-row:nth-child(even) {
+  background-color: #fffdf2;
+}
+.ll-card-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* label 1 del, värde 2 delar */
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.3rem 0;
+}
+
+.ll-card-row strong {
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap; /* label ska aldrig brytas */
+}
+
+.ll-card-row span,
+.ll-card-row div:not(:has(strong)) {
+  word-break: break-word; /* långa email bryts snyggt */
+  overflow-wrap: anywhere;
+}
+
+
+
+/*==========================================
+  Generic Modal
+  ========================================*/
+ 
+  .hidden {
+  display: none !important;
+}
+
+#generic-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 35;
+}
+
+/* === MODAL PANEL === */
+.ll-modal-panel {
+  background: #FFFDF2;
+  border: 3px solid #E4E70E;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 90%;
+  max-width: 480px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.80);
+  animation: modalPop 0.25s ease;
+}
+
+/* === TITLE === */
+#modal-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+  color: #333;
+}
+
+/* === FIELDS === */
+#modal-fields label {
+  display: block;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  color: #444;
+}
+
+#modal-fields input {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  border: 2px solid #E4E70E;
+  background: #FFF8CC;
+  font-size: 1rem;
+  transition: 0.15s ease;
+}
+
+#modal-fields input:focus {
+  outline: none;
+  background: #FFFDF2;
+  border-color: #d4d70c;
+}
+
+/* === BUTTONS === */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.8rem;
+}
+
+#modal-save,
+#modal-delete {
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+/* Save = LemonLemon green */
+#modal-save {
+  background: #8CD600;
+  color: #fff;
+}
+
+#modal-save:hover {
+  background: #7ac200;
+  transform: translateY(-2px);
+}
+
+#modal-save:active {
+  transform: translateY(1px) scale(0.98);
+}
+#modal-cancel {
+  background: #E4E70E;
+  color: #333;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+#modal-cancel:hover {
+  background: #d4d70c;
+  transform: translateY(-2px);
+}
+
+#modal-cancel:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+
+/* Delete = LemonLemon red */
+#modal-delete {
+  background: #FF5A5A;
+  color: #fff;
+}
+
+#modal-delete:hover {
+  background: #e94c4c;
+  transform: translateY(-2px);
+}
+
+#modal-delete:active {
+  transform: translateY(1px) scale(0.98);
+}
+/*========================================
+  DROPDOWN SORTING
+  ======================================*/
+ .ll-sort-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.ll-sort-trigger {
+  padding: 6px 10px;
+  background: #fff7c2;
+  border: 1px solid #e0c200;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.ll-sort-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 160px;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  display: none;
+  z-index: 10;
+}
+
+.ll-sort-dropdown:hover .ll-sort-menu {
+  display: block;
+}
+
+.ll-sort-menu button {
+  display: block;
+  width: 100%;
+  padding: 6px 10px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.ll-sort-menu button:hover {
+  background: #fff3a0;
+}
+.ll-btn-add {
+  background: #32CD32;
+  border: 0.0625rem solid #e0b800; 
+  padding: 0.5rem 0.875rem;
+  margin: 0.5rem;        
+  border-radius: 0.375rem;        
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 0.75rem;          
+}
+
+.ll-btn-add:hover {
+  background: #ffdd55;
+}
+
+.ll-btn-add:hover {
+  background: #ffdd55;
+}
+
+/*///////////////////////////////
+HÄR LÄGGER VI IN CARSTACK FÖR BLÄDDRING AV BILARNA
+////////////////////////////////*/
+
+
+/* =========================================
+   POPUPS
+========================================= */
+
+.ll-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 0.4rem 1rem rgba(0,0,0,0.8);
+  min-width: 16.25rem;
+  max-width: 21.25rem;
+  animation: popupFadeIn 0.25s ease-out;
+  margin-bottom: 1.5rem;
+  z-index: 9999; 
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.25s ease;
+}
+
+.ll-popup.visible {
+   display: block !important;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ll-popup.hidden {
+  display: none;
+}
+
+.ll-popup--success {
+  
+  background-color: lime;
+  border: 0.0625rem solid #B6E57A;
+  border-left: 0.25rem solid #8CD44A;
+}
+
+.ll-popup--error {
+  
+  background-color: tomato;
+  border: 0.0625rem solid #FFB3B3;
+  border-left: 0.5rem solid #FF6B6B;
+}
+
+.ll-popup-close {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.75rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  opacity: 0.6;
+}
+
+
+/* =========================================
+   PANELS
+========================================= */
+
+.ll-panel,
+.ll-panel--positive,
+.ll-panel--negative {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 2%;
+  margin-bottom: 3%;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.8);
+}
+
+.ll-panel {
+  border: 0.12rem solid rgba(228, 231, 14);
+}
+
+.ll-panel--positive {
+  border: 0.24rem solid #32CD32;
+}
+
+.ll-panel--negative {
+  border: 0.36rem solid #c02f2f;
+}
+
+/* =========================================
+   FORM
+========================================= */
+.ll-membership-form {
+  background: #FFFDF2;
+  border: 0.1875rem solid #E4E70E;
+  border-radius: 0.75rem;
+  padding: 2rem 3.5rem;
+  max-width: 26rem;
+  margin: 1rem auto;
+}
+
+.ll-membership-logo {
+  width: 4rem;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+}
+
+.ll-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 0.125rem solid #E4E70E;
+  border-radius: 0.5rem;
+  background: #ffffff;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.ll-submit-btn {
+  background: rgba(228, 231, 14, 0.6);
+  border: none;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+}
+
+.ll-submit-btn:hover {
+  background: #d4d70d;
+}
+/*=====================================
+Popup modal för att ändra i saker
+ CAR ROW FÖR ADMIN FORMULÄREN POST CREATE OSV LÄNGST NER
+=====================================*/
+/* --- MODAL OVERLAY --- */
+
+.modal {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 35;
+}
+
+/* Dölj popupen */
+.modal.hidden {
+  display: none;
+}
+
+/* --- MODAL BOX --- */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  width: 380px;
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: popupFade 0.15s ease-out;
+}
+
+/* --- LABELS & INPUTS --- */
+#modal-fields label {
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+#modal-fields input,
+#modal-fields select {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Disabled ID field */
+#modal-fields input:disabled {
+  background: #f3f3f3;
+  color: #777;
+}
+
+/* --- BUTTONS --- */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.modal-actions button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Save */
+#modal-save {
+  background: #4caf50;
+  color: white;
+}
+
+/* Delete */
+#modal-delete {
+  background: #e53935;
+  color: white;
+}
+
+/* Close */
+.modal-actions button:last-child {
+  background: #777;
+  color: white;
+}
+
+.car-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.car-row strong {
+  width: 100%;
+}
+
+/* =========================================
+   TABLET BREAKPOINT (768–1099px)
+========================================= */
+@media (min-width: 768px) and (max-width: 1099px) {
+
+  :root {
+    --sidebar-width: 250px;
+    --header-height: 180px;
+    --footer-width: 200px;
+    --footer-height: 160px;
+  }
+
+  .ll-header {
+    height: var(--header-height);
+  }
+
+  /* NAVIGATION */
+  .ll-nav {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: var(--sidebar-width);
+    z-index: 12;
+  }
+
+  .ll-nav-toggle {
+    display: none;
+  }
+
+  /* MAIN CONTENT */
+  .ll-main {
+    margin-left: var(--sidebar-width);
+    margin-right: 0;
+    margin-top: var(--header-height);
+    padding: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+  }
+
+  /* ROW LAYOUT */
+  .ll-row {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .ll-col-info { flex: 1 1 150px; }
+  .ll-col-button { flex: 1 1 120px; }
+  .ll-col-copy { flex: 1 1 180px; }
+
+  .table-few thead,
+  .table-many thead {
+    display: block;
+  }
+
+  .table-few thead tr,
+  .table-many thead tr {
+    display: block;
+  }
+
+  .table-few thead th,
+  .table-many thead th {
+    display: block;
+    background-color: #E4E70E;
+    font-weight: 600;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid #ddd;
+  }
+}
+/*==============================
+ MEDIALÄGE 1100 + 
+ ==============================*/
+@media (min-width: 1100px) {
+
+  :root {
+    --sidebar-width: 350px;
+    --header-height: 250px;
+    --footer-width: 180px;
+  }
+
+ 
+  .ll-nav {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: var(--sidebar-width);
+    z-index: 12;
+  }
+  
+
+  .ll-footer,
+  .footer-box,
+  .footer-ad {
+    max-height: none !important;
+  }
+
+
+  /* FOOTER TILL HÖGER */
+.ll-footer {
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    left: auto;
+    bottom: 0;
+
+    width: var(--footer-width);
+    max-width: var(--footer-width);
+    height: calc(100vh - var(--header-height));
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.footer-box {
+    flex: 1 1 0;
+    min-height: 0;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: stretch; 
+}
+
+.footer-ad {
+    width: 100%;        
+    height: 100%;      
+    object-fit: cover; 
+    display: block;
+}
+
+  /* MAIN */
+  .ll-main {
+    margin-left: var(--sidebar-width);
+    margin-right: var(--footer-width);
+    margin-top: var(--header-height);
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE CAR LAYOUT (MOBILE → DESKTOP)
+   HÄR LIGGER MAN UPPDELNINGSFLEXKODEN OCH @MEDIA FÖR DEN
+   BÖRJAR BLI LITE BRÅDIS HÄR
+========================================= */
+
+/* =========================================
+    MEDIAANPASSNING FÖR INLAGDA BILDER
+========================================= */
+.car-image {
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+/* TABLET (768–1099px) */
+@media (min-width: 768px) and (max-width: 1099px) {
+  .car-row {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .car-image {
+    width: 50%;
+  }
+
+  .car-row strong {
+    width: 12rem;
+  }
+}
+
+/* DESKTOP = 1100px  */
+@media (min-width: 1100px) {
+  .car-row {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .car-image {
+    width: 50%;
+  }
+
+  .car-row strong {
+    width: 14rem;
+  }
+}
+
+/* =========================================
+   FLEX CONTAINER – MOBILE FIRST
+========================================= */
+.ll-flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ll-flex-item {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* LANDING IMAGE */
+.landing-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  display: block;
+}
+
+/* FULL-HEIGHT IMAGE FILL */
+.ll-img--fill {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================================
+   1100–1599px Bilden ovanför, 35vh
+========================================= */
+@media (max-width: 1599px) {
+
+  .ll-flex-container {
+    flex-direction: column;
+  }
+
+  .ll-flex-item {
+    width: 100%;
+  }
+
+  .landing-image-wrapper {
+    order: -1;
+    width: 100%;
+    height: 35vh;
+    overflow: hidden;
+    position: static;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .landing-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+  }
+
+  .landing-list,
+  #user-cars-container {
+    height: auto;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+}
+
+/* =========================================
+   1600px+ LAYOUT
+========================================= */
+@media (min-width: 1600px) {
+
+  .ll-flex-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  .ll-flex-item {
+    width: 50%;
+  }
+
+  .landing-list,
+  #user-cars-container {
+    height: 100vh;
+    overflow-y: auto;
+    padding-right: 1rem;
+    box-sizing: border-box;
+  }
+
+  .landing-image-wrapper {
+    height: 100vh;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .landing-image {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* =========================================
+   USER BOOKING IMAGES
+========================================= */
+.ll-booking-img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.ll-booking-row {
+  margin: 0.25rem 0;
+}
+
+/* =========================================
+   GLOBAL RESPONSIVE IMAGE CLASS
+========================================= */
+.ll-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+/* =========================================
+   LOGIN RAD MED LOGIN PEPP OCH KNAPP
+========================================= */
+.ll-login-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.ll-btn-login {
+  background-color: #E4E70E;
+  color: #000;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* =========================================
+   PRIS SCHNEIDAT TILL LITE
+========================================= */
+.price-row {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.price-green {
+  color: #66d11e;
+  font-weight: 700;
+}
+
+/* =========================================
+   SCROLL ENDAST PÅ LISTORNA (1600px+)
+========================================= */
+@media (min-width: 1600px) {
+  #users-list,
+  #cars-list,
+  #bookings-list {
+    height: 100vh;
+    overflow-y: auto;
+  }
+}
+
+/* =========================================
+   SIGNATURLOGGA I HEADERN
+========================================= */
+.ll-signature {
+  display: block;
+  height: 250px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(3px 3px 2px #000);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
